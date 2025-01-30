@@ -1,7 +1,7 @@
+# setup.py
 import glob
 import setuptools
 from typing import List
-
 import poker_ai
 
 
@@ -27,21 +27,21 @@ def get_requirements() -> List[str]:
 
 
 setuptools.setup(
-    name="poker_ai",
-    version=poker_ai.__version__,
-    author="Leon Fedden, Colin Manko",
-    author_email="leonfedden@gmail.com",
-    description="Open source implementation of a CFR based poker AI player.",
-    long_description=get_package_description(),
-    long_description_content_type="text/markdown",
-    url="https://github.com/fedden/poker_ai",
-    packages=setuptools.find_packages(),
-    install_requires=get_requirements(),
-    classifiers=[
+    name="poker_ai",  # The name of the package
+    version=poker_ai.__version__,  # Version from the poker_ai module
+    author="Leon Fedden, Colin Manko",  # Author name(s)
+    author_email="leonfedden@gmail.com",  # Author email
+    description="Open source implementation of a CFR based poker AI player.",  # Short description of your package
+    long_description=get_package_description(),  # Long description, typically from your README
+    long_description_content_type="text/markdown",  # The content type of your long description (Markdown)
+    url="https://github.com/fedden/poker_ai",  # Project's home page URL
+    packages=setuptools.find_packages(),  # Automatically discover and include all packages in the project
+    install_requires=get_requirements(),  # List of dependencies from the requirements.txt file
+    classifiers=[  # Classifiers help others discover your package by categorizing it
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
         "Operating System :: OS Independent",
     ],
-    scripts=get_scripts_from_bin(),
-    python_requires=">=3.7",
+    scripts=get_scripts_from_bin(),  # Include scripts from the bin directory in your package
+    python_requires=">=3.7",  # Specify the Python version requirement
 )
