@@ -9,9 +9,7 @@ from tqdm import tqdm
 from poker_ai.poker.card import Card
 from poker_ai.poker.deck import get_all_suits
 
-
 log = logging.getLogger("poker_ai.clustering.runner")
-
 
 class CardCombos:
     """This class stores combinations of cards (histories) per street."""
